@@ -9,11 +9,52 @@
     tools:context=".activities.LoginActivity">
 
     <include layout="@layout/nav_bar"/>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/logo"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="@dimen/marginSize"/>
+
+    <!--自定义控件-->
+    <com.example.depmusic.views.InputView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/inputViewHeight"
+        android:layout_marginTop="@dimen/marginSize"
+        app:input_icon="@mipmap/phone"
+        app:input_hint="手机号"
+        app:is_password="false"></com.example.depmusic.views.InputView>
+    
+    <View
+        style="@style/line"/>
+
+    <com.example.depmusic.views.InputView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/inputViewHeight"
+        android:layout_marginTop="@dimen/marginSize"
+        app:input_icon="@mipmap/password"
+        app:input_hint="密码"
+        app:is_password="true"></com.example.depmusic.views.InputView>
+
+    <View
+        style="@style/line"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="23sp"
-        android:text="loginActivity"/>
+        android:padding="@dimen/marginSize"
+        android:text="立即注册"
+        android:layout_gravity="center_horizontal"
+        android:textSize="@dimen/infoSize"
+        android:textColor="@color/mainColor"
+        android:onClick="onRegisterClick"/>
+
+    <Button
+        style="@style/commitBtn"
+        android:text="登  录"
+        android:layout_marginTop="@dimen/marginSize"
+        />
+
+
 
 </LinearLayout>

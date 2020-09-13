@@ -34,6 +34,9 @@ open class BaseActivity:AppCompatActivity() {
         mIvMe!!.visibility = if (isShowMe) View.VISIBLE else View.GONE
         mTvTitle!!.text = title
         mIvBack!!.setOnClickListener { onBackPressed() }
-
+        mIvMe!!.setOnClickListener{
+            var intent= Intent(this,MeActivity::class.java)
+            startActivity(intent)
+        }
     }
 }

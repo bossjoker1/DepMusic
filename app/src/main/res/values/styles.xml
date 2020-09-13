@@ -2,7 +2,20 @@
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
+        <item name="android:windowAnimationStyle">@style/AnimationActivity</item>
         <item name="colorPrimaryDark">@color/mainColor</item>
+    </style>
+    
+    <style name="AnimationActivity" parent="@android:style/Animation.Activity">
+        <!-- 打开Activity时,新进入的Activity执行的动画-->
+        <item name="android:activityOpenEnterAnimation">@anim/open_enter</item>
+        <!-- 打开Activity时，原Activity执行的动画 -->
+        <item name = "android:activityOpenExitAnimation">@anim/open_exit</item>
+        <!-- 退出Activity时，退出的Activity执行的动画 -->
+        <item name="android:activityCloseExitAnimation">@anim/close_exit</item>
+        <!-- 退出Activity时，重新显示的Activity执行的动画 -->
+        <item name="android:activityCloseEnterAnimation">@anim/close_enter</item>
+
     </style>
     
     <!--分割线样式-->
